@@ -1,0 +1,12 @@
+  <nav>
+    <div class="nav-wrapper">
+      <a href="#" class="brand-logo">URL LockBox</a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <% if current_user %>
+        <li><a href="/logout">Logout</a></li>
+        <% else  %>
+        <li><a href="/login">Login</a></li>
+        <% end %>
+      </ul>
+    </div>
+  </nav>
