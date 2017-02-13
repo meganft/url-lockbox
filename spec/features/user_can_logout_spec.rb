@@ -22,6 +22,6 @@ describe "A registered user can logout" do
 
     expect(page).to have_content("You have successfully logged out.")
 
-    # expect(current_path).to eq(links_path)
+    expect(current_path).to eq(login_path)
   end
 end
