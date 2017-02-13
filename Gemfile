@@ -15,6 +15,7 @@ gem 'responders'
 gem 'awesome_print'
 gem 'sprockets-es6'
 gem 'phantomjs', :require => 'phantomjs/poltergeist'
+gem "validate_url"
 
 gem 'bcrypt', '~> 3.1.7'
 
