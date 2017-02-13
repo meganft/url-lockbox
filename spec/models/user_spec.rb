@@ -25,5 +25,19 @@ RSpec.describe User, type: :model do
         expect(user).to be_valid
       end
     end
+
+    context "uniqueness" do
+      it "has a unique email" do
+        User.create(name: "Bob", email: "yellow@yellow.com", password: "blue")
+        user = User.new(name: "Steve", email: "yellow@yellow.com", password: "red")
+        expect(user).to be_invalid
+      end
+    end
+  end
+  describe "relationships" do
+    it "has many links" do
+      user = User.create(name: "Bob", email: "yellow@yellow.com", password: "blue")
+      expect(user).to respond_to(:links)
+    end
   end
 end
