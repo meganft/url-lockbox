@@ -13,7 +13,6 @@ gem 'rails_12factor', group: :production
 gem 'responders'
 gem 'awesome_print'
 gem 'sprockets-es6'
-gem 'phantomjs', :require => 'phantomjs/poltergeist'
 gem "validate_url"
 gem 'faraday'
 
@@ -27,7 +26,9 @@ group :development do
   gem 'better_errors'
 end
 
-group :development, :test do
+group :test do
+  gem 'phantomjs', :require => 'phantomjs/poltergeist'
+
   gem 'byebug'
   gem 'rspec-rails'
   gem 'capybara'
