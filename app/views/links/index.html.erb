@@ -1,7 +1,14 @@
 <div class="links-index">
 <% @links.each do |link| %>
-<%= link.url %>
-<%= link.title %>
+<div class="link" data-link-id="<%= link.id %>" >
+  <h5>Title: <%= link.title %></h5>
+  <p>URL: <%= link.url %>
+  <!-- <script>
+    var linkId = <%= link.id %>;
+  </script> -->
+  <span class="read-status">Read status: <%= link.read %></span>
+  <span class="mark-as-read"><button type="button">Mark as Read</button></span>
+</div>
 <% end %>
 </div>
 
