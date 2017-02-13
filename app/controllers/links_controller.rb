@@ -16,6 +16,22 @@ class LinksController < ApplicationController
     end
   end
 
+  def edit
+    @link = Link.find(params[:id])
+  end
+
+  def update
+    @link = Link.find(params[:id])
+    @link.update(link_update_params)
+    if @link.save
+      flash[:success] = "Successfully updated this link!"
+      redirect_to links_path
+    else
+      flash[:error] = @link.errors.full_messages.first
+      render :edit
+    end
+  end
+
   def authorize
     redirect_to login_path unless current_user
   end
@@ -23,6 +39,10 @@ class LinksController < ApplicationController
   private
     def link_params
       params.permit(:url, :title)
+    end
+
+    def link_update_params
+      params.require(:link).permit(:url, :title)
     end
 
 end

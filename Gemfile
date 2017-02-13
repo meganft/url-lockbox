@@ -1,6 +1,5 @@
 source 'https://rubygems.org'
 
-
 gem 'rails', '~> 5.0.0', '>= 5.0.0.1'
 gem 'pg'
 gem 'sass-rails', '~> 5.0'
@@ -16,6 +15,7 @@ gem 'awesome_print'
 gem 'sprockets-es6'
 gem 'phantomjs', :require => 'phantomjs/poltergeist'
 gem "validate_url"
+gem 'faraday'
 
 gem 'bcrypt', '~> 3.1.7'
 
