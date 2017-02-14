@@ -17,10 +17,13 @@ function markAsRead(e) {
   $.ajax({
      type: "POST",
      url: "https://arcane-escarpment-10807.herokuapp.com/api/v1/reads",
-     headers: $link ,
+     headers: $link,
      success: function(){
            alert("Marked as Read");
-       }
+       },
+      error: function(){
+        console.log();
+      }
    });
 }
 
