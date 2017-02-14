@@ -5,7 +5,6 @@ class Api::V1::LinksController < ApplicationController
     if @link.update_attributes(link_params)
       render json: @link
       # Read.send_to_hotreads(@link)
-      # head :no_content
     else
       render json: @link.errors.full_messages, status: 500
     end

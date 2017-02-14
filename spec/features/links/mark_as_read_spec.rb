@@ -16,7 +16,6 @@ RSpec.describe "can mark links as read", :js => :true do
       click_button "Mark as Read"
     end
 
-    # expect(link.read).to eq(true)
     within('.link .read-status') do
       expect(page).to have_text("true")
     end
