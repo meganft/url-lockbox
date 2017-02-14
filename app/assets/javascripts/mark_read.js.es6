@@ -14,13 +14,15 @@ function markAsRead(e) {
   }).then(updateLinkStatus)
     .fail(displayFailure);
 
-  axios.post("https://arcane-escarpment-10807.herokuapp.com/api/v1/reads", {
-    link: { 'url': $link }
-    }
-
-
-  );
-
+  $.ajax({
+    type: "POST",
+    url: "https://arcane-escarpment-10807.herokuapp.com/api/v1/links",
+    headers: { url: $link },
+    crossDomain : true,
+    success: function(){
+          alert("Read Complete");
+      }
+  });
 
 }
 
