@@ -20,7 +20,7 @@ function markAsRead(e) {
      url: "https://arcane-escarpment-10807.herokuapp.com/api/v1/reads",
      data: {link: url},
      success: function(){
-        alert("Marked as Read");
+        alert("Marked as Read on Hot Reads");
        },
       error: function(){
         console.log();
