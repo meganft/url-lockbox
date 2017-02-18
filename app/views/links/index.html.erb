@@ -1,6 +1,6 @@
 <div class="links-index">
 <% @links.each do |link| %>
-<div class="link" data-link-id="<%= link.id %>" >
+<div class="link" data-link-id="<%= link.id %>" data-link-url="<%= link.url %>">
   <h5>Title: <%= link.title %></h5>
   <p>URL: <%= link.url %></p>
   <p><span class="read-status">Read status: <%= link.read %></span>

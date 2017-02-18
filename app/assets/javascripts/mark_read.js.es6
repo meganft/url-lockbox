@@ -6,6 +6,7 @@ function markAsRead(e) {
   e.preventDefault();
   var $link = $(this).parents('.link');
   var linkId = $link.data('link-id');
+  var url = $this.data('link-url');
 
   $.ajax({
     type: "PATCH",
@@ -17,7 +18,7 @@ function markAsRead(e) {
   $.ajax({
      type: "POST",
      url: "https://arcane-escarpment-10807.herokuapp.com/api/v1/reads",
-     headers: $link,
+     data: url,
      success: function(){
            alert("Marked as Read");
        },
